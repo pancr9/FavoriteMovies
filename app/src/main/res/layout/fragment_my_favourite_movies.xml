@@ -1,0 +1,71 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rekhansh.inclass08w.MyFavouriteMovies">
+
+    <RelativeLayout
+        android:id="@+id/activity_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.example.rekhansh.inclass08w.MainActivity">
+
+        <Button
+            android:id="@+id/button_addMovie"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button_edit"
+            android:layout_alignParentTop="true"
+            android:layout_alignStart="@+id/button_edit"
+            android:layout_marginTop="90dp"
+            android:text="@string/add_movie_string"
+            android:textAllCaps="false"
+            android:theme="@android:style/TextAppearance.Material.Widget.Button" />
+
+        <Button
+            android:id="@+id/button_showList"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button_deleteMovie"
+            android:layout_alignStart="@+id/button_deleteMovie"
+            android:layout_below="@+id/button_deleteMovie"
+            android:layout_marginTop="5dp"
+            android:text="@string/show_listString"
+            android:textAllCaps="false"
+            android:theme="@android:style/TextAppearance.Material.Widget.Button" />
+
+        <Button
+            android:id="@+id/button_deleteMovie"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button_edit"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:text="@string/delete_MovieString"
+            android:textAllCaps="false"
+            android:theme="@android:style/TextAppearance.Material.Widget.Button" />
+
+        <Button
+            android:id="@+id/button_edit"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button_deleteMovie"
+            android:layout_alignStart="@+id/button_deleteMovie"
+            android:layout_below="@+id/button_addMovie"
+            android:text="@string/edit_string"
+            android:textAllCaps="false"
+            android:theme="@android:style/TextAppearance.Material.Widget.Button" />
+
+        <Button
+            android:id="@+id/button_showRating"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/button_showList"
+            android:layout_alignStart="@+id/button_showList"
+            android:layout_below="@+id/button_showList"
+            android:text="@string/string_showRating"
+            android:textAllCaps="false"
+            android:theme="@android:style/TextAppearance.Material.Widget.Button" />
+    </RelativeLayout>
+
+</FrameLayout>

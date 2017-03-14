@@ -1,0 +1,187 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.rekhansh.inclass08w.EditMovie">
+
+    <RelativeLayout
+        android:id="@+id/activity_add_movie"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp">
+
+        <EditText
+            android:id="@+id/editText_name"
+            style="@style/Widget.AppCompat.EditText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/text_name"
+            android:layout_alignBottom="@+id/text_name"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="28dp"
+            android:layout_marginStart="28dp"
+            android:layout_toRightOf="@+id/text_name"
+            android:ems="10"
+            android:gravity="center_horizontal"
+            android:inputType="text"
+            android:maxLength="@integer/name_length"
+            android:textColor="@android:color/black" />
+
+        <TextView
+            android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/string_name"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_description"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/text_name"
+            android:layout_alignStart="@+id/text_name"
+            android:layout_below="@+id/editText_name"
+            android:layout_marginTop="17dp"
+            android:text="@string/string_description"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_genre"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_description"
+            android:layout_alignStart="@+id/editText_description"
+            android:layout_centerVertical="true"
+            android:text="@string/string_genre"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/textView_year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="47dp"
+            android:text="@string/string_year"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_below="@+id/textView_rating"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <TextView
+            android:id="@+id/textView_imdb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/string_imdb"
+            android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_alignBottom="@+id/editText_imdb"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <Spinner
+            android:id="@+id/spinner_categories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/seekBar_rate"
+            android:layout_alignStart="@+id/seekBar_rate"
+            android:layout_alignTop="@+id/textView_genre"
+            android:dropDownWidth="match_parent"
+            android:gravity="center_horizontal"
+            android:inputType="textMultiLine" />
+
+        <EditText
+            android:id="@+id/editText_year"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="numberSigned"
+            android:maxLength="4"
+            android:textColor="@android:color/black"
+            android:layout_alignBottom="@+id/textView_year"
+            android:layout_alignLeft="@+id/editText_name"
+            android:layout_alignStart="@+id/editText_name" />
+
+        <EditText
+            android:id="@+id/editText_imdb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:inputType="textWebEditText"
+            android:maxLength="50"
+            android:textColor="@android:color/black"
+            android:layout_below="@+id/editText_year"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignLeft="@+id/editText_year"
+            android:layout_alignStart="@+id/editText_year" />
+
+        <TextView
+            android:id="@+id/textView_rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/textView_genre"
+            android:layout_alignStart="@+id/textView_genre"
+            android:layout_below="@+id/spinner_categories"
+            android:layout_marginTop="23dp"
+            android:text="@string/string_rating"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/button_addMovietoList"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:text="@string/string_saveChanges"
+            android:textAllCaps="false"
+            android:theme="@style/Base.Widget.AppCompat.Button" />
+
+        <SeekBar
+            android:id="@+id/seekBar_rate"
+            android:layout_width="230dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/editText_year"
+            android:layout_alignStart="@+id/editText_year"
+            android:layout_alignTop="@+id/textView_rating"
+            android:max="@integer/max_rating" />
+
+        <TextView
+            android:id="@+id/textView_rate2"
+            android:layout_width="36dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/textView_rating"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@+id/seekBar_rate"
+            android:gravity="center"
+            android:padding="10dp"
+            android:textColor="@android:color/black" />
+
+        <EditText
+            android:id="@+id/editText_description"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:layout_alignLeft="@+id/textView_description"
+            android:layout_alignStart="@+id/textView_description"
+            android:layout_below="@+id/textView_description"
+            android:layout_marginTop="19dp"
+            android:background="@drawable/shape"
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:maxLength="@integer/description_length"
+            android:padding="5dp"
+            android:textColor="@android:color/black"
+            android:theme="@style/Platform.V25.AppCompat.Light" />
+    </RelativeLayout>
+
+</FrameLayout>
